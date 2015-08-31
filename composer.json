@@ -1,6 +1,6 @@
 {
     "name": "graham-campbell/credentials",
-    "description": "Credentials Is A Cool Way To Authenticate In Laravel 5",
+    "description": "Credentials Is A Cool Way To Authenticate In Laravel 4.2",
     "keywords": ["laravel", "framework", "credentials", "login", "users", "permissions", "sentry", "Credentials", "Laravel Credentials", "Laravel-Credentials", "Graham Campbell", "GrahamCampbell"],
     "license": "MIT",
     "authors": [
@@ -9,42 +9,37 @@
             "email": "graham@mineuk.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/BootstrapCMS/sentry"
-        }
-    ],
     "require": {
-        "php": ">=5.5.0",
-        "illuminate/console": "5.0.*",
-        "illuminate/contracts": "5.0.*",
-        "illuminate/database": "5.0.*",
-        "illuminate/events": "5.0.*",
-        "illuminate/http": "5.0.*",
-        "illuminate/html": "5.0.*",
-        "illuminate/mail": "5.0.*",
-        "illuminate/pagination": "5.0.*",
-        "illuminate/routing": "5.0.*",
-        "illuminate/support": "5.0.*",
-        "illuminate/validation": "5.0.*",
-        "illuminate/view": "5.0.*",
-        "cartalyst/sentry": "~3.0",
-        "graham-campbell/core": "~2.0",
-        "graham-campbell/binput": "~3.0",
-        "graham-campbell/throttle": "~3.0",
-        "sebastian/diff": "~1.2",
-        "mccool/laravel-auto-presenter": "~3.0",
-        "psr/log": "~1.0"
+        "php": ">=5.4.7",
+        "illuminate/console": "~4.2",
+        "illuminate/database": "~4.2",
+        "illuminate/events": "~4.2",
+        "illuminate/http": "~4.2",
+        "illuminate/html": "~4.2",
+        "illuminate/mail": "~4.2",
+        "illuminate/routing": "~4.2",
+        "illuminate/support": "~4.2",
+        "illuminate/view": "~4.2",
+        "cartalyst/sentry": "2.1.*",
+        "graham-campbell/core": "~1.0",
+        "graham-campbell/database": "0.1.*",
+        "graham-campbell/binput": "~2.0",
+        "graham-campbell/throttle": "~2.0",
+        "sebastian/diff": "~1.1",
+        "mccool/laravel-auto-presenter": "2.1.*"
     },
     "require-dev": {
-        "graham-campbell/testbench": "~2.0",
+        "graham-campbell/testbench": "~1.0",
         "doctrine/dbal": "~2.4"
     },
     "suggest": {
+        "graham-campbell/queuing": "Improved mailer performance.",
         "graham-campbell/navigation": "Easily add a navigation bar."
     },
     "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
         "psr-4": {
             "GrahamCampbell\\Credentials\\": "src/"
         }
@@ -52,11 +47,6 @@
     "autoload-dev": {
         "psr-4": {
             "GrahamCampbell\\Tests\\Credentials\\": "tests/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.4-dev"
         }
     },
     "minimum-stability": "dev",
